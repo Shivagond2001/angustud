@@ -1,0 +1,35 @@
+
+
+
+<form    ngNativeValidate class="my-form">
+    <div class="form-module">
+      <label>Username :</label>
+      <input
+        
+        type="text"
+        name="username"
+        placeholder="username"
+        [(ngModel)]="username"
+        required
+      />
+      
+    </div>
+    <pre></pre>
+    <div >
+        <label>Password :</label>
+        <input
+        
+          type="text"
+          name="password"
+          placeholder="Password"
+          [(ngModel)]="password"
+          required
+        />
+      </div>
+      <pre></pre>
+    <div >
+      
+      <button  (click)="login()">Login</button>
+      <button  (click)="reg()">Register</button>
+    </div>
+  </form>

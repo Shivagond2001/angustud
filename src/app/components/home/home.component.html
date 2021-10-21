@@ -1,0 +1,32 @@
+
+<form #frm="ngForm">
+    <input  required    ngModel type="date" name="date">
+    <table>
+        <tr>
+            <th>Name </th>
+            <th>USN</th>
+            <th>Mark Attendance</th>
+        </tr>
+        <tr *ngFor="let student of students, let i=index">
+            <td>{{student.name}}</td>
+            <td>{{student.usn}}</td>
+            <td>
+                <input    ngModel type="checkbox" name=u{{i}} >
+            </td>
+        </tr>
+        
+    </table>
+    <button type="button" (click)=markattendance(frm)>Submit</button>
+</form>
+
+    <button type="button" (click)=displayatt()>Display Attendance</button>
+    <ul>
+        <li *ngFor="let s of satt">
+            {{s.name}}
+            {{s.usn}}
+            {{s.date}}
+        </li>
+    </ul>
+
+
+
